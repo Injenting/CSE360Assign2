@@ -65,10 +65,11 @@ public class AddingMachine {
         
         
         /**
-         * Clears something 
-         *
+         * Clears the history and sets the total to 0.
+         * What this method does was not specified, but this makes sense.
          */
 	public void clear() {
-	
+            total = 0;
+            history = "0";
 	}
 }
