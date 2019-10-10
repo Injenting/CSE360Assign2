@@ -10,12 +10,14 @@ package cse360assign2;
 public class AddingMachine {
 
 	private int total;
+        private String history;
 	
         /**
         * Class constructor
         */
 	public AddingMachine () {
 		total = 0;  // not needed - included for clarity
+                history = "0";
 	}
 	
         
@@ -25,7 +27,7 @@ public class AddingMachine {
          * @return  the value of total
          */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
         
@@ -35,7 +37,8 @@ public class AddingMachine {
          * @param  value   an int to be added to total
          */        
 	public void add (int value) {
-		
+            total += value;
+            history += " + " + value;
 	}
 
         
@@ -45,18 +48,19 @@ public class AddingMachine {
          * @param  value   an int that is to be subtracted from total
          */
 	public void subtract (int value) {
-		
+            total -= value;
+            history += " - " + value;
 	}
 
         
         /**
-         * Returns a String that contains the additions and subtractions
+         * Returns a String that represents all of the additions and subtractions
          * that have been called on the instance of this class.
          *
          * @return      the history of transactions on total
          */
 	public String toString () {
-		return "";
+		return history;
 	}
         
         
